@@ -4,7 +4,6 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
 						http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -36,7 +35,26 @@
 	</dependencies>
     <dependencyManagement>
         <dependencies>
-
+			<dependency>
+				<groupId>com.fast.snail.lukydog</groupId>
+				<artifactId>app</artifactId>
+				<version>1.0.0</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fast.snail.lukydog</groupId>
+				<artifactId>biz</artifactId>
+				<version>1.0.0</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fast.snail.lukydog</groupId>
+				<artifactId>dao</artifactId>
+				<version>1.0.0</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fast.snail.lukydog</groupId>
+				<artifactId>ext</artifactId>
+				<version>1.0.0</version>
+			</dependency>
         </dependencies>
     </dependencyManagement>
 
