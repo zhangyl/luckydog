@@ -1,4 +1,4 @@
-package com.fast.snail.lukydog;
+package com.fast.snail.lukydog.controller;
 
 import org.springframework.boot.SpringApplication;
 
