@@ -7,17 +7,17 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.6.1</version>
+		<version>2.7.18</version>
 		<relativePath />
 	</parent>
 
 	<groupId>com.fast.snail</groupId>
-	<artifactId>lukydog</artifactId>
+	<artifactId>luckydog</artifactId>
 	<version>1.0.0</version>
 	<packaging>pom</packaging>
 
-	<name>lukydog</name>
-	<description>lukydog</description>
+	<name>luckydog</name>
+	<description>luckydog</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -30,31 +30,45 @@
 		<module>dao</module>
 		<module>ext</module>
     </modules>
-	
-	<dependencies>
-	</dependencies>
+
     <dependencyManagement>
         <dependencies>
 			<dependency>
-				<groupId>com.fast.snail.lukydog</groupId>
+				<groupId>com.fast.snail.luckydog</groupId>
 				<artifactId>app</artifactId>
 				<version>1.0.0</version>
 			</dependency>
 			<dependency>
-				<groupId>com.fast.snail.lukydog</groupId>
+				<groupId>com.fast.snail.luckydog</groupId>
 				<artifactId>biz</artifactId>
 				<version>1.0.0</version>
 			</dependency>
 			<dependency>
-				<groupId>com.fast.snail.lukydog</groupId>
+				<groupId>com.fast.snail.luckydog</groupId>
 				<artifactId>dao</artifactId>
 				<version>1.0.0</version>
 			</dependency>
 			<dependency>
-				<groupId>com.fast.snail.lukydog</groupId>
+				<groupId>com.fast.snail.luckydog</groupId>
 				<artifactId>ext</artifactId>
 				<version>1.0.0</version>
 			</dependency>
+			<dependency>
+				<groupId>org.mybatis.spring.boot</groupId>
+				<artifactId>mybatis-spring-boot-starter</artifactId>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-web</artifactId>
+				<version>3.3.5</version>
+			</dependency>
+			<!-- begin 注册中心依赖 -->
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-starter-zookeeper-discovery</artifactId>
+				<version>4.1.2</version>
+			</dependency>
+			<!-- end 注册中心依赖 -->
         </dependencies>
     </dependencyManagement>
 
