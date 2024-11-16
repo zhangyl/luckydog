@@ -1,4 +1,4 @@
-package com.fast.snail.lukydog.dao.base.object;
+package com.fast.snail.luckydog.dao.base.object;
 
 import java.util.Date;
 import java.util.Map;

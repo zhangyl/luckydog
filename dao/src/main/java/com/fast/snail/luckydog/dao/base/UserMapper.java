@@ -1,7 +1,7 @@
-package com.fast.snail.lukydog.dao.base;
+package com.fast.snail.luckydog.dao.base;
 
 
-import com.fast.snail.lukydog.dao.base.object.UserDO;
+import com.fast.snail.luckydog.dao.base.object.UserDO;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
