@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Param;
 @Mapper
 public interface UserMapper {
 
-    UserDO selectByPrimaryKey(@Param("userCode") String userCode);
+    UserDO selectByPrimaryKey(@Param("entCode") String entCode, @Param("userCode") String userCode);
 
     int insert(@Param("userDO") UserDO userDO);
 

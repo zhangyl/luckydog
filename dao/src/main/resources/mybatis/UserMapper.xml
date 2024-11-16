@@ -16,14 +16,15 @@
     user_code, ent_code, user_name, phone_number, user_status, create_time, update_time
   </sql>
   
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from t_user where user_code = #{userCode}
+    from t_user_${entCode}
+    where user_code = #{userCode}
   </select>
 
   <update id="updateUserByPrimaryKey">
-    update t_user set
+    update t_user_${entCode} set
       user_name = #{userDO.userName},
       phone_number = #{userDO.phoneNumber},
       user_status = #{userDO.userStatus},
@@ -32,7 +33,7 @@
   </update>
 
   <insert id="insert">
-    insert into t_user(user_code, user_name, create_time, update_time)
+    insert into t_user_${entCode}(user_code, user_name, create_time, update_time)
     values (#{userDO.userCode}, #{userDO.userName}, now(), now())
   </insert>
 
