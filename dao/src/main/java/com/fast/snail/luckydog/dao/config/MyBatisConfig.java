@@ -36,10 +36,10 @@ public class MyBatisConfig {
 
     @Autowired(required = false)
 
-    /**
-     * 使用单纯application-jdbc.yaml时候，需要打开。
-     * 使用使用单纯application.yaml(shardingsphere)时候，不用配置这个数据源
-     */
+//    /**
+//     * 使用单纯application-jdbc.yaml时候，需要打开。
+//     * 使用使用单纯application.yaml(shardingsphere)时候，不用配置这个数据源
+//     */
 
 //    @Bean
 //    public DataSource createDataSource() throws PropertyVetoException {

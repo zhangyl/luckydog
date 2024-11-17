@@ -25,6 +25,7 @@
 	</properties>
 	
     <modules>
+		<module>api</module>
 		<module>app</module>
         <module>biz</module>
 		<module>dao</module>
