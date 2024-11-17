@@ -3,7 +3,7 @@ package com.fast.snail.luckydog.controller;
 public class HttpResult<T> {
     private T data;
     private String errorMessage;
-    private boolean success;
+    private boolean success = true;
 
     public T getData() {
         return data;

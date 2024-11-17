@@ -8,8 +8,8 @@
     <result column="user_name" jdbcType="VARCHAR" property="userName" />
     <result column="phone_number" jdbcType="VARCHAR" property="phoneNumber" />
     <result column="user_status" jdbcType="VARCHAR" property="userStatus" />
-    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
-    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+<!--    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />-->
+<!--    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />-->
   </resultMap>
   
   <sql id="Base_Column_List">
@@ -21,6 +21,26 @@
     <include refid="Base_Column_List" />
     from t_user_${entCode}
     where user_code = #{userCode}
+  </select>
+
+  <select id="selectDynamicColumnByPK" resultType="hashmap">
+    select
+      user_code userCode,
+      <foreach item="dynamicColumn" collection="dynamicColumnList" separator="," >
+        ${dynamicColumn.columnName}
+      </foreach>
+    from t_user_${entCode}
+    where ent_code = #{entCode}
+      and user_code in
+      <foreach item="primaryKey" collection="primaryKeyList" separator="," open="(" close=")">
+        #{primaryKey}
+      </foreach>
+
+      <if test="dynamicColumnList != null">
+        <foreach item="item" collection="dynamicColumnList" separator=" " >
+          and ${item.columnName} = #{item.columnValue}
+        </foreach>
+      </if>
   </select>
 
   <update id="updateUserByPrimaryKey">
