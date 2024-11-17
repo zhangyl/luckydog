@@ -8,3 +8,4 @@ CREATE TABLE `t_user` (
    `update_time` timestamp(6) NULL DEFAULT CURRENT_TIMESTAMP(6),
    PRIMARY KEY (`user_code`)
  ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+

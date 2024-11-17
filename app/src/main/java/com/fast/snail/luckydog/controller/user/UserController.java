@@ -1,6 +1,6 @@
 package com.fast.snail.luckydog.controller.user;
 
-import com.fast.snail.luckydog.biz.user.UserManager;
+import com.fast.snail.luckydog.biz.user.UserManagerImpl;
 import com.fast.snail.luckydog.controller.HttpResult;
 import com.fast.snail.luckydog.controller.user.vo.UserVO;
 import com.fast.snail.luckydog.dao.base.object.UserDO;
@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
 
     @Resource
-    private UserManager userManager;
+    private UserManagerImpl userManager;
 
     @GetMapping("/user/{userCode}")
     @ResponseBody

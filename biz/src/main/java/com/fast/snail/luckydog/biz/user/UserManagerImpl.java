@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 
 @Component
-public class UserManagerImpl implements UserManager {
+public class UserManagerImpl {
 
     @Resource
     private UserMapper userMapper;
